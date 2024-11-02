@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
-    <title>AI Poem Generator</title>
+    <title>AI French Poem Generator</title>
 </head>
 <body>
-    <h1>Poem generator</h1>
+    <div class="container">
+        <header>
+            <h1>AI French Poem generator</h1>
+        </header>
+        
+        <main>
+            <form action="">
+                <input type="text" placeholder="Enter the topic of the poem?" autofocus required autocomplete="off" class="instructions"/>
+                <input type="submit" value="Generate poem" class="submit-button" />
+            </form>
 
-    <footer>This AI project was coded by 
-        <a href="https://github.com/AiatSaied/" target="_blank">Aiat Saied</a>
-        and is 
-        <a href="https://github.com/AiatSaied/french-poem-generator" target="_blank">open-sourced on GitHub</a>
-        and is
-        <a href="https://french-poem-generator-ai-aiat.netlify.app/" target="_blank">hosted on Netlify</a>
-    </footer>
-    
+            <div class="poem">
+                Demain, dès l’aube, à l’heure où blanchit la campagne,
+                <br />
+                Je partirai. Vois-tu, je sais que tu m’attends.
+            </div>
+        </main>
+
+        <footer>This AI project was coded by 
+            <a href="https://github.com/AiatSaied/" target="_blank">Aiat Saied</a>
+            and is 
+            <a href="https://github.com/AiatSaied/french-poem-generator" target="_blank">open-sourced on GitHub</a>
+            and is
+            <a href="https://french-poem-generator-ai-aiat.netlify.app/" target="_blank">hosted on Netlify</a>
+        </footer>
+    </div>
     <script src="src/index.js"></script>
 </body>
 </html>
