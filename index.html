@@ -17,13 +17,17 @@
         </header>
         
         <main>
-            <form id="poem-generator-form">
-                <input type="text" placeholder="Enter the topic of the poem?" autofocus required autocomplete="off" 
-                class="instructions"  id="user-instructions"/>
-                <input type="submit" value="Generate poem" class="submit-button" />
-            </form>
+            <div class="form-container">
+                <form id="poem-generator-form">
+                    <input type="text" placeholder="Enter the topic of the poem?" autofocus required autocomplete="off" 
+                    class="instructions"  id="user-instructions"/>
+                    <input type="submit" value="Generate poem" class="submit-button" />
+                </form>
 
-            <div class="poem" id="poem"></div>
+                <div class="hint">i.e: Flower, Paris or Cheese</div>
+            </div>
+
+            <div class="poem hidden blink" id="poem"></div>
         </main>
 
         <footer>This AI project was coded by 
