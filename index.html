@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
+    <!--AI Typewriter plugin-->
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <!--Axios Js-->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>AI French Poem Generator</title>
 </head>
 <body>
@@ -15,7 +18,8 @@
         
         <main>
             <form id="poem-generator-form">
-                <input type="text" placeholder="Enter the topic of the poem?" autofocus required autocomplete="off" class="instructions"/>
+                <input type="text" placeholder="Enter the topic of the poem?" autofocus required autocomplete="off" 
+                class="instructions"  id="user-instructions"/>
                 <input type="submit" value="Generate poem" class="submit-button" />
             </form>
 

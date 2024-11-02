@@ -1,12 +1,24 @@
-function generatePoem(event){
-    event.preventDefault();
-
+function displayPoem(response){
     new Typewriter('#poem', {
-        strings: 'Demain, dès l’aube, à l’heure où blanchit la campagne,',
+        strings: response.data.answer,
         autoStart: true,
         delay: 1,
         cursor: "",
     });
+}
+
+function generatePoem(event){
+    event.preventDefault();
+
+    let instructionsInput =  document.querySelector("#user-instructions");
+
+    let apiKey = "2be1a4330t4eoe390bfd7847639b4add";
+    let context = 
+    "You are a romantic poem expert and love to write short poems. You mission is to generate a 4 line poem in basic HTML and separate each line  with a <br/>. Make sure to follow the user instructions. do not include a title to a poem. Sign the poem with 'SheCodes AI' inside a <strong> element at the end of the poem. do not include the word 'html' and this sign '```' in the first and end.";
+    let prompt = `User Instructions: Generate a French Poem about ${instructionsInput.value}`;
+    let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+    axios.get(apiUrl).then(displayPoem);
 }
 
 
